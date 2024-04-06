@@ -1,3 +1,4 @@
+package Homework_1;
 import java.util.Collection;
 
 //Интерфейс для структур
