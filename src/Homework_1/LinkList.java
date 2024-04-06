@@ -83,9 +83,12 @@ public class LinkList<T extends Comparable<T>> implements MyList<T> {
         if((index>=length)||(index<0))
             throw new ArrayIndexOutOfBoundsException();
         Node del = goTo(index);
-        if(del.next!=null)
-            del.prev.next = del.next;
-        del.next.prev = del.prev;
+        if(del.next==null)
+            tail = del.prev;
+        else
+            del.next.prev = del.prev;
+        del.prev.next = del.next;
+       
     }
 
     //Добавление элементов коллекции
