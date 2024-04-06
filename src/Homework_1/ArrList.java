@@ -70,7 +70,7 @@ public class ArrList<T extends Comparable<T>> implements MyList<T>{
     //Добавление элементов из коллекции
     public void addAll(Collection<? extends T> col){
         isSorted= false;
-        col.stream().forEach((cons)-> {
+        col.forEach((cons)-> {
             add(cons);
         });
     }
