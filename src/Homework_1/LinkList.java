@@ -87,7 +87,10 @@ public class LinkList<T extends Comparable<T>> implements MyList<T> {
             tail = del.prev;
         else
             del.next.prev = del.prev;
-        del.prev.next = del.next;
+        if(del.prev == null)
+            head = del.next;
+        else
+            del.prev.next = del.next;
        
     }
 
